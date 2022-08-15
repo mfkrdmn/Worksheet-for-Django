@@ -1,5 +1,6 @@
-from pickle import TRUE
 from django.db import models
+
+# Create your models here.
 
 # Create your models here.
 class Teacher(models.Model):
@@ -11,8 +12,8 @@ class Teacher(models.Model):
 
 class Lesson(models.Model):
     lesson_name = models.CharField(max_length=50)
-    lesson_teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
-    #Bir hoca birden fazla ders verebilir
+    lesson_teacher = models.OneToOneField(Teacher, on_delete=models.CASCADE)
+    #Bir hoca sadece bir ders verebilir, bir derse iki hoca atanmak isterse hata verir
 
     def __str__(self):
         return f"{self.lesson_name}-Teacher({self.lesson_teacher})"

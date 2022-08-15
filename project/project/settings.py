@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_one_onetomany'
+    'app_one_onetomany',
+    'app_one_onetoone',
+    'app_three_manytomany',
 ]
 
 MIDDLEWARE = [
