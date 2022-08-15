@@ -1,5 +1,3 @@
-from multiprocessing import context
-import re
 from django.shortcuts import render
 from .models import *
 # Create your views here.
@@ -7,9 +5,11 @@ from .models import *
 def index(request):
 
     lesson = Lesson.objects.all()
+    picture = Teacher.objects.all()
 
     context = {
-        "lesson" : lesson
+        "lesson" : lesson,
+        "picture" : picture,
     }
 
     return render(request, "index.html", context)
