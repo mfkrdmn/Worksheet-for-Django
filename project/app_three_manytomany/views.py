@@ -5,11 +5,11 @@ from .models import *
 def index(request):
     
     lesson = Lesson.objects.all()
-    picture = Teacher.objects.all()
+    teacher = Teacher.objects.all()
 
     context = {
         "lesson" : lesson,
-        "picture" : picture,
+        "teacher" : teacher,
     }
 
     return render(request, "index_manytomany.html", context)

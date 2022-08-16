@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include("app_one_onetomany.urls")),
     path('', include("app_one_onetoone.urls")),
     path('', include("app_three_manytomany.urls")),
+    path('', include("app_four_teacherprofie.urls")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
