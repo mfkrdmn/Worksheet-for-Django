@@ -13,8 +13,8 @@
 </head>
 <body> 
     <div class="container">
-        <h2 class="text-center">Teacher Profile</h2>
-        {% for i in  teachers %}
+        <h2 class="text-center">Lecture Page</h2>
+        {% for i in  lectures %}
           <div class="row">  
             <div class="col-12">
               <div class="our-team">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="team-content">
                   <h3 class="name">{{i.name}}</h3>
-                  <h4 class="title"> <a href="/lecture/{{i.lectures}}">{{i.lectures}}</a></h4>
+                  <h4 class="title"> <a href="/profile/{{i.teacher}}"> {{i.teacher}}</a></h4>
                 </div>
               </div>
             </div>
