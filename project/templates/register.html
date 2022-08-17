@@ -1,31 +1,28 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login or Sign up</title>
+    <title>Register</title>
     <link rel="stylesheet" href="{% static 'css/log.css' %}">
 
 </head>
 <body>
     <main>
         <div class="row">
-            <div class="colm-logo">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Logo">
-                <h2>Facebook helps you connect and share with the people in your life.</h2>
-            </div>
             <div class="colm-form">
                 <div class="form-container">
+                    <input type="text" placeholder="Username">
                     <input type="text" placeholder="Email address or phone number">
                     <input type="password" placeholder="Password">
-                    <button class="btn-login">Login</button>
-                    <a href="#">Forgotten password?</a>
-                    <button class="btn-new">Create new Account</button>
+                    <input type="password" placeholder="Password Again">
+                    <button class="btn-login">Register</button>
+                    <button class="btn-new"> <a href="/login" style="color: white;">Have an account?</a></button>
                 </div>
-                <p><a href="#"><b>Create a Page</b></a> for a celebrity, brand or business.</p>
             </div>
         </div>
     </main>
 </body>
-</html>

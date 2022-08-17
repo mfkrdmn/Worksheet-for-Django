@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,19 +13,13 @@
 <body>
     <main>
         <div class="row">
-            <div class="colm-logo">
-                <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Logo">
-                <h2>Facebook helps you connect and share with the people in your life.</h2>
-            </div>
             <div class="colm-form">
                 <div class="form-container">
-                    <input type="text" placeholder="Email address or phone number">
+                    <input type="text" placeholder="Username">
                     <input type="password" placeholder="Password">
                     <button class="btn-login">Login</button>
-                    <a href="#">Forgotten password?</a>
-                    <button class="btn-new">Create new Account</button>
+                    <button class="btn-new"> <a href="/register" style="color: white;">Create new Account</a></button>
                 </div>
-                <p><a href="#"><b>Create a Page</b></a> for a celebrity, brand or business.</p>
             </div>
         </div>
     </main>
