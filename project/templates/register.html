@@ -15,12 +15,19 @@
         <div class="row">
             <div class="colm-form">
                 <div class="form-container">
-                    <input type="text" placeholder="Username">
-                    <input type="text" placeholder="Email address or phone number">
-                    <input type="password" placeholder="Password">
-                    <input type="password" placeholder="Password Again">
-                    <button class="btn-login">Register</button>
-                    <button class="btn-new"> <a href="/login" style="color: white;">Have an account?</a></button>
+                    {% for i in messages %}
+                    <h4 style="margin-top: 30px;">{{i}}</h4>
+                    {% endfor %}
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <input name="fullName" type="text" placeholder="Fullname">
+                        <input name="username" type="text" placeholder="Username">
+                        <input name="email" type="text" placeholder="Email address or phone number">
+                        <input name="password" type="password" placeholder="Password">
+                        <input name="password_again" type="password" placeholder="Password Again">
+                        <button type="submit" class="btn-login">Register</button>
+                        <button class="btn-new"> <a href="/login" style="color: white;">Have an account?</a></button>
+                    </form>
                 </div>
             </div>
         </div>
