@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'app_one_onetoone',
     'app_three_manytomany',
     'app_four_teacherprofie',
+    'app_five_user',
 ]
 
 MIDDLEWARE = [
