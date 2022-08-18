@@ -51,9 +51,12 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            return redirect('index_onetoone')
+            return redirect('landingPage')
         else:
             messages.info(request, 'User Invalid')
-            return redirect('index_onetoone')
+            return redirect('/login')
     else:
         return render(request, 'login.html')
+
+def landingPage(request):
+    return render(request, 'landingPage.html')

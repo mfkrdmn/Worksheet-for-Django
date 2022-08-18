@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'app_three_manytomany',
     'app_four_teacherprofie',
     'app_five_user',
+    'app_six_todoapp',
 ]
 
 MIDDLEWARE = [
