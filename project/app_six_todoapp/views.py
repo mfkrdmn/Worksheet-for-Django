@@ -23,3 +23,11 @@ def todo(request):
     }
 
     return render(request, 'todo.html', context)
+
+
+def deleteTask(request,pk):
+
+    item = Task.objects.filter(id=pk)
+
+    item.delete()
+    return redirect("/todoapp")
