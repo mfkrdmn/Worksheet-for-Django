@@ -16,7 +16,13 @@
 
     <div id="container">
         <h1>To-Do List <i class="fa fa-plus"></i></h1>
-        <input type="text" placeholder="Add New Todo">
+
+        <form action="todoapp" method="POST">
+            {% csrf_token %}
+            {{form.title}}
+            <input type="submit" placeholder="Add New Todo">
+        </form>
+
         <ul>
             {% for i  in  tasks %}
             <li><span><i class="fa fa-trash"></i></span> {{i.title}}</li>
