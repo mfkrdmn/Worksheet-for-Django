@@ -25,9 +25,13 @@
 
         <ul>
             {% for i  in  tasks %}
-            
-            <li><span><i class="fa fa-trash"></i></span> {{i.title}}</li>
-            
+
+                {% if i.complete == True %}
+                    <strike> <li>{{i.title}}</li></strike>
+                {% else %}
+                    <li>{{i.title}}</li>
+                {% endif %}
+                    
             <a href="{% url 'deleteTask' i.id %}">delete</a>
 
             {% endfor %}
